@@ -16,7 +16,20 @@ var Schema = mongoose.Schema;
 var uri = 'mongodb:// localhost/ mean-book'; 
 var db = require(' mongoose'). connect( uri);
 
-var menteeSchema = new Schema({
+var userSchema = new Schema({
+  username: String,
+  firstname: String,
+  lastname: String,
+  password: String, 
+  officeHours: String,
+  angular: String, 
+  node: String, 
+  javascript: String, 
+  skill: String,
+  interest: String
+});
+
+/*var menteeSchema = new Schema({
   username: String,
   firstname: String,
   lastname: String,
@@ -46,6 +59,8 @@ var mentorSchema = new Schema({
 var Mentee = mongoose.model('Mentee', menteeSchema);
 
 var Mentor = mongoose.model('Mentor', mentorSchema);
+*/
+var User = mongoose.model("User", userSchema);
 
 
 
