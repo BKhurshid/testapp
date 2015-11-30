@@ -31,9 +31,32 @@ app.post('/mentee', requestHandlerFuncForSignUp);
 
 app.post('/mentor', requestHandlerFuncForSignUp);
 
-var requestHandlerFuncForLogIn = function(req, res){
+var requestHandlerFuncForLogIn = function(req, res, next){
   //query relational database to get the users information that will go on profile page
-  //use express-sessions to store in redis database whether a user is logged in or not
+//if the user is not in database
+    //create account using 
+    /*
+
+    Using the new keyword, the create() method creates a new model instance, which is populated using the request body. 
+
+
+    var user = new User(req.body);
+    //Finally, you call the model instance's save() method that either saves the user and outputs the user object, or fail, passing the error to the next middleware.
+    user.save(function(err){ 
+        //if error
+        if (err){
+        //return the next function with the error as the argument
+         return next(err); 
+         }else{ 
+            //I am not sure what this line does.
+            res.json(user); 
+        } 
+    });
+
+
+    */
+
+  //use express-sessions to store in mongoose database whether a user is logged in or not
 
 };
 
