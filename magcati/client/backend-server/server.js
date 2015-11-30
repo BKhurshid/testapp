@@ -27,11 +27,13 @@ var requestHandlerFuncForSignUp = function(req, res){
   //use express-sessions to store in redis database whether a user is logged in or not
 
 };
+/*
+    Not necessary as mentor and mentee will be added to every skill as a question.
 app.post('/mentee', requestHandlerFuncForSignUp);
 
-app.post('/mentor', requestHandlerFuncForSignUp);
+app.post('/mentor', requestHandlerFuncForSignUp);*/
 
-var requestHandlerFuncForLogIn = function(req, res, next){
+var requestHandlerFuncForLogInOrSignUp = function(req, res, next){
   //query relational database to get the users information that will go on profile page
 //if the user is not in database
     //create account using 
@@ -60,7 +62,7 @@ var requestHandlerFuncForLogIn = function(req, res, next){
 
 };
 
-app.post('/login', requestHandlerFuncForLogIn);
+app.post('/login', requestHandlerFuncForLogInOrSignUp);
 
 //Start the express.js web server and output a user-friendly terminal message in a callback
 app.listen(port, function(){
