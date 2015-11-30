@@ -22,6 +22,9 @@ var menteeSchema = new Schema({
   lastname: String,
   password: String, 
   officeHours: String,
+  angular: String, 
+  node: String, 
+  javascript: String, 
   skill: String,
   interest: String
 });
@@ -32,6 +35,9 @@ var mentorSchema = new Schema({
   firstname: String,
   lastname: String,
   password: String, 
+  angular: String, 
+  node: String, 
+  javascript: String, 
   skill: String,
   officehours: String,
   locaton: String
